@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-void ArrayTranpose(int size, int i, int j){
+void ArrayTranpose(int size, int i, int j,int arr[25][25]){
 
     printf("The transpose of the matrix is:\n");
-    for (int i=0; i<size; i++){
-        for (int j=0; j<size; j++){
+    for (i=0; i<size; i++){
+        for (j=0; j<size; j++){
                 printf("%d ", arr[j][i]);
         }
         printf("\n");
@@ -12,19 +12,21 @@ void ArrayTranpose(int size, int i, int j){
 }
 
 int main(){
-    int size, arr[25][25];
+    int size, arr[25][25],i,j;
     printf("Enter the size of the array:");
     scanf("%d", &size);
 
-    printf("Enter the matrix elements:\n");
+    printf("Enter the matrix elements:\n\n");
 
-    for (int i=0; i<size; i++){
-        for (int j=0; j<size; j++){
+    for (i=0; i<size; i++){
+        for (j=0; j<size; j++){
+                printf("Enter a%d%d: ", i+1, j+1);
                 scanf("%d", &arr[i][j]);
         }
         printf("\n");
+    }
 
-    ArrayTranpose(size,i,j,arr[][]);
+    ArrayTranpose(size,i,j,arr);
 
     return 0;
 }
