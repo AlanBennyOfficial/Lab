@@ -1,11 +1,14 @@
 #include<stdio.h>
 int main()
 {
-
-    for(int i = 1; i <= 5; i++)
+    int n;
+    printf("Enter a number:");
+    scanf("%d", &n);
+    
+    for(int i = 1; i <= n; i++)
     {
         printf("\n");
-        for(int k=1; k<=(5-i);k++){
+        for(int k=1; k<=(n-i);k++){
             printf(" ");
         } 
             for(int j = 1; j <= i; j++){
